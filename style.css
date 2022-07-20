@@ -1,0 +1,42 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    border: 5px blue solid;
+    width: 75px;
+    padding: 10px 0px;
+    border-radius: 10px;
+    background-color: aqua;
+    margin: 10px 20px;
+    cursor: pointer;
+    text-align: center;
+    text-justify: center;
+}
+
+.buttonContainer {
+    display: flex;
+    
+}
+
+.container {
+    max-height: 80vh;
+    width: 90vh;
+    aspect-ratio: 1 / 1;
+    display: grid;
+    /*grid-template-columns: repeat(5, 1fr);*/
+    grid-template-rows: repeat(auto-fill, 1fr);
+   border: 2px gray solid;
+    
+
+}
+
+.gridBlock {
+    max-width: auto;
+    max-height: auto;
+    aspect-ratio: 1 / 1;
+    /*background-color: blue;*/
+}
