@@ -34,7 +34,7 @@ body {
 }
 
 .container {
-    max-height: 80vh;
+    max-height: 90vh;
     width: 90vh;
     aspect-ratio: 1 / 1;
     display: grid;
@@ -45,7 +45,7 @@ body {
 }
 
 .gridBlock {
-    max-width: auto;
-    max-height: auto;
-    aspect-ratio: 1 / 1;
+    width: 1fr;
+    height: 1fr;
+    
 }
