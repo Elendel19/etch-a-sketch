@@ -3,6 +3,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #b8b8b8;
 }
 
 .button {
@@ -19,7 +20,15 @@ body {
 
 .buttonContainer {
     display: flex;
-    
+    flex-direction: column;
+}
+
+.slider {
+    width: 500px
+}
+
+.wrapper {
+    display: flex;
 }
 
 .container {
@@ -27,16 +36,13 @@ body {
     width: 90vh;
     aspect-ratio: 1 / 1;
     display: grid;
-    /*grid-template-columns: repeat(5, 1fr);*/
     grid-template-rows: repeat(auto-fill, 1fr);
-   border: 2px gray solid;
-    
-
+    border: 10px blue solid;
+    background-color: white;
 }
 
 .gridBlock {
     max-width: auto;
     max-height: auto;
     aspect-ratio: 1 / 1;
-    /*background-color: blue;*/
 }
