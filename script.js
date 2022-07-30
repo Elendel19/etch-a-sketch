@@ -15,13 +15,12 @@ sizeText.textContent = `${slider.value}x${slider.value}`;
 let color = 1;
 let rainbow = '';
 let black = '';
-let boardSize = 24;
+let boardSize = slider.value;
 
 slider.addEventListener('change', () => {
   boardSize = slider.value;
   sizeText.textContent = `${slider.value}x${slider.value}`;
   resetBoard();
-  drawBoard(boardSize);
 });
 
 reset.addEventListener('click', () => {
@@ -57,11 +56,10 @@ buttons.forEach(button => button.addEventListener('click', () => {
   }));
 
 function resetBoard() {
-  let children = container.children; 
-  for (let i = 0; i < children.length; i++) {
-    if (children[i].tagName === "DIV") {
-      children[i].style.backgroundColor = null;
-    }
+  let child = container.lastElementChild; 
+  while (child) {
+    container.removeChild(child);
+    child = container.lastElementChild
   }
     drawBoard(boardSize);
 };
@@ -72,6 +70,7 @@ function randomColor() {
 
 function drawBoard(size) {
     container.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+    
     for (let i = 0; i < size * size; i++) {
         let blockClone = gridBlock.cloneNode();
         container.appendChild(blockClone);
